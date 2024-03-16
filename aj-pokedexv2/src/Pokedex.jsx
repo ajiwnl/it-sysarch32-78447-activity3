@@ -1,7 +1,7 @@
 // Pokedex.jsx
 import React, { useState } from 'react';
-import Pokemon from './Pokemon'; // Assuming Pokemon component is defined in Pokemon.jsx
-import './Pokedex.css'; // Importing CSS file for styling
+import Pokemon from './Pokemon';
+import './Pokedex.css';
 
 function Pokedex({ pokemonList }) {
     const [language, setLanguage] = useState('english');
@@ -13,10 +13,10 @@ function Pokedex({ pokemonList }) {
     return (
         <div className="pokedex-container">
             <div className="language-buttons">
-                <button onClick={() => handleLanguageChange('english')}>English</button>
-                <button onClick={() => handleLanguageChange('japanese')}>Japanese</button>
-                <button onClick={() => handleLanguageChange('chinese')}>Chinese</button>
-                <button onClick={() => handleLanguageChange('french')}>French</button>
+                <button class-name = "btnDesign" onClick={() => handleLanguageChange('english')}>English</button>
+                <button class-name = "btnDesign" onClick={() => handleLanguageChange('japanese')}>Japanese</button>
+                <button class-name = "btnDesign" onClick={() => handleLanguageChange('chinese')}>Chinese</button>
+                <button class-name = "btnDesign" onClick={() => handleLanguageChange('french')}>French</button>
             </div>
             <div className="pokemon-list">
                 {pokemonList.map((pokemon, index) => (
@@ -25,9 +25,14 @@ function Pokedex({ pokemonList }) {
                         id={pokemon.id}
                         name={pokemon.name[language]}
                         image={pokemon.image}
-                        types={pokemon.types}
-                        hp={pokemon.hp}
-                        attack={pokemon.attack}
+                        types={pokemon.type}
+                        hp={pokemon.base.HP}
+                        attack={pokemon.base.Attack}
+                        defense={pokemon.base.Defense}
+                        spattack={pokemon.base["Sp. Attack"]}
+                        spdefense={pokemon.base["Sp. Defense"]}
+                        speed={pokemon.base.Speed}
+                        
                     />
                 ))}
             </div>

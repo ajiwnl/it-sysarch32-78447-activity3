@@ -1,4 +1,4 @@
-.custom-button {
+button {
     background-color: #4caf50; /* Green */
     border: none;
     color: white;
@@ -12,6 +12,6 @@
     border-radius: 10px;
 }
 
-.custom-button:hover {
+button {
     background-color: #45a049; /* Darker Green */
 }
