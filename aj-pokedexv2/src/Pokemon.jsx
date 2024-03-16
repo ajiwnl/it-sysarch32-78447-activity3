@@ -13,9 +13,11 @@ function Pokemon({ id, name, image, types, hp, attack, defense, spattack, spdefe
                 <div className="types-container">
                     {types && types.length > 0 && <p>{types.join('           ')}</p>}
                 </div>
+                <div className='row1' >
                 <p>HP: {hp}</p>
                 <p>Attack: {attack}</p>
                 <p>Defense: {defense}</p>
+                </div>
                 <div className='row2'>
                 <p>Sp. Attack: {spattack}</p>
                 <p>Sp. Defense: {spdefense}</p>
